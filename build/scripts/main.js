@@ -28,7 +28,7 @@ $(window).load(function(){
 
 	//Delete task
 	$(".task__button").on("click",".fa-trash-o",function(){
-		var itemToDelete = $(this).closest(".row").addClass('task--delete');
+		var itemToDelete = $(this).closest(".row");
 		itemToDelete.remove();		
 	});
 });
