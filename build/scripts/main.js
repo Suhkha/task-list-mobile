@@ -21,8 +21,8 @@ $(window).load(function(){
 	});
 
 	// Favorites
-	// it works! but works with fa-trash-o too :(
-	$(".fa-star").on("click",function(){
+	// it works!
+	$(".task__button").on("click",".fa-star",function(){
 		$(this).toggleClass('task__button--favorite');
 	});
 });
