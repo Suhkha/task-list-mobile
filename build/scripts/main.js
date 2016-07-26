@@ -25,4 +25,10 @@ $(window).load(function(){
 	$(".task__button").on("click",".fa-star",function(){
 		$(this).toggleClass('task__button--favorite');
 	});
+
+	//Delete task
+	$(".task__button").on("click",".fa-trash-o",function(){
+		var itemToDelete = $(this).closest(".row").addClass('task--delete');
+		itemToDelete.remove();		
+	});
 });
