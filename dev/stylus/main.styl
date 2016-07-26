@@ -43,6 +43,22 @@ input[type=checkbox]:checked + .checkbox__mask:before
 	
 .task
 	background white
+	padding-bottom 20px
+	&__day 
+		color $gray
+		text-transform uppercase
+		font-size 20px
+		display block
+		padding 15px 30px
+	&__icon
+		.fa
+		&--completed
+			color $purple
+			font-size 25px
+			line-height 1
+			margin-left 5px
+		&--completed
+			color $gray !important
 	&__header
 		background-image url('../images/header__task-list.jpg')
 		background-position center center
@@ -76,37 +92,34 @@ input[type=checkbox]:checked + .checkbox__mask:before
 			padding 5px 10px
 			right 30px
 	&__list
-		&--day 
-			color $gray
-			text-transform uppercase
-			font-size 20px
-			display block
-			padding 15px 30px
-		&--icon
-			.fa
-				color $purple
-				font-size 25px
-				line-height 1
-				margin-left 5px
-		&--item
-			padding 0 0 0 5px
+		&--hide
+			opacity 0
+	
+	&__button
+		font-size 25px
+		color $gray
+		cursor pointer
+		&--favorite
+			color $yellow !important
+		.fa-trash-o
+			color $red !important			
+	&__item
+		padding 0 0 0 5px
 		&--title
 		&--description
+		&--completed
 			display block
+		&--title
+		&--completed
+			font-size 18px	
 		&--title
 			color $purple_dark
-			font-size 18px
 			font-weight bold
 		&--description
-			color $gray
 			font-size 16px
-		&--star
-			color $yellow
-			font-size 25px
-
-
-
-	
-
-		
+		&--description
+		&--completed
+			color $gray
+		&--completed
+			text-decoration line-through	
 	

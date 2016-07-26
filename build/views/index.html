@@ -22,28 +22,29 @@
 
 
 			<div class="task__list">
-				<span class="task__list--day">today</span>
+				<span class="task__day">today</span>
 				<div class="row">
 					<div class="col-sm-12 col-xs-12">
 						<div class="col-sm-1 col-xs-1 ">
-							<input id="box1" type="checkbox">
+							<input id="box1" type="checkbox" name="task__checkbox">
 							<label for="box1" class="checkbox__mask"></label>
 						</div>
+
 						<div class="col-sm-1 col-xs-1 ">
-							<div class="task__list--icon">
+							<div class="task__icon">
 								<i class="fa fa-skype" aria-hidden="true"></i>
 							</div>
 						</div>
 
 						<div class="col-sm-9 col-xs-9">
-							<div class="task__list--item">
-								<span class="task__list--title">Design onboarding screen</span>
-								<span class="task__list--description">Discuss with the dev first</span>
+							<div class="task__item">
+								<span class="task__item--title" value="data-title">Design onboarding screen</span>
+								<span class="task__item--description">Discuss with the dev first</span>
 							</div>
 						</div>
 
 						<div class="col-sm-1 col-xs-1 ">
-							<div class="task__list--star">
+							<div class="task__button">
 								<i class="fa fa-star" aria-hidden="true"></i>
 							</div>
 						</div>
@@ -55,60 +56,91 @@
 				<div class="row">
 					<div class="col-sm-12 col-xs-12">
 						<div class="col-sm-1 col-xs-1 ">
-							<input id="box2" type="checkbox">
+							<input id="box2" type="checkbox" name="task__checkbox">
 							<label for="box2" class="checkbox__mask"></label>
 						</div>
 						<div class="col-sm-1 col-xs-1 ">
-							<div class="task__list--icon">
+							<div class="task__icon">
 								<i class="fa fa-paint-brush" aria-hidden="true"></i>
 							</div>
 						</div>
 
 						<div class="col-sm-9 col-xs-9">
-							<div class="task__list--item">
-								<span class="task__list--title">Create a new icon set</span>
+							<div class="task__item">
+								<span class="task__item--title">Create a new icon set</span>
 							</div>
 						</div>
 
 						<div class="col-sm-1 col-xs-1">
-							<div class="task__list--star">
+							<div class="task__button">
 								<i class="fa fa-star" aria-hidden="true"></i>
 							</div>
 						</div>
 						
 					</div>
 				</div>
+				<div class="border"></div>
 				
-				<span class="task__list--day">tomorrow</span>
+				<span class="task__day">tomorrow</span>
 				<div class="row">
 					<div class="col-sm-12 col-xs-12">
 						<div class="col-sm-1 col-xs-1 ">
-							<input id="box3" type="checkbox">
+							<input id="box3" type="checkbox" name="task__checkbox">
 							<label for="box3" class="checkbox__mask"></label>
 						</div>
 						<div class="col-sm-1 col-xs-1 ">
-							<div class="task__list--icon">
+							<div class="task__icon">
 								<i class="fa fa-coffee" aria-hidden="true"></i>
 							</div>
 						</div>
 
 						<div class="col-sm-9 col-xs-9">
-							<div class="task__list--item">
-								<span class="task__list--title">Create portfolio web</span>
+							<div class="task__item">
+								<span class="task__item--title">Create portfolio web</span>
 							</div>
 						</div>
 
 						<div class="col-sm-1 col-xs-1 ">
-							<div class="task__list--star">
+							<div class="task__button">
 								<i class="fa fa-star" aria-hidden="true"></i>
 							</div>
 						</div>
 						
 					</div>
 				</div>
+				<div class="border"></div>
+
+				<div class="row">
+					<div class="col-sm-12 col-xs-12">
+						<div class="col-sm-1 col-xs-1 task__list--hide">
+							<input id="box4" type="checkbox" name="task__checkbox">
+							<label for="box4" class="checkbox__mask"></label>
+						</div>
+						<div class="col-sm-1 col-xs-1 task__list--hide">
+							<div class="task__icon">
+								<i class="fa fa-paint-brush" aria-hidden="true"></i>
+							</div>
+						</div>
+
+						<div class="col-sm-9 col-xs-9">
+							<div class="task__item">
+								<span class="task__item--title task__item--completed">Create a new icon set</span>
+							</div>
+						</div>
+
+						<div class="col-sm-1 col-xs-1">
+							<div class="task__button">
+								<i class="fa fa-trash-o" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="border"></div>
 			</div>
 		</div>
 	</main>
+	<script src="../scripts/vendor.min.js"></script>
 	<script src="https://use.fontawesome.com/be7e763425.js"></script>
+	<script src="../scripts/main.js"></script>
 </body>
 </html>
