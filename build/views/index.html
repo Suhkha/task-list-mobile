@@ -22,6 +22,73 @@
 
 
 			<div class="task__list">
+
+				<div class="row task__form task__form--hidden">
+						<div class="col-sm-12 col-xs-12">
+							<div class="task__item">
+								<span class="task__input--title">Title</span>
+								<input type="text" id="title" name="title" class="form-control">
+								<span class="task__input--title">Description</span>
+								<input type="text" id="description" name="description" class="form-control">
+								<span class="task__input--title">Pick a icon</span>
+								<div class="task__icon">
+									<div class="row">
+										<div class="task__icon--select col-xs-4">
+											<input type="radio" name="fa-icon" value="fa fa-credit-card">
+											<i class="fa fa-credit-card" aria-hidden="true"></i>
+										</div>
+										
+										<div class="task__icon--select col-xs-4">
+											<input type="radio" name="fa-icon" value="fa futbol-o">
+											<i class="fa fa-futbol-o" aria-hidden="true"></i>
+										</div>
+
+										<div class="task__icon--select col-xs-4">
+											<input type="radio" name="fa-icon" value="fa fa-university">
+											<i class="fa fa-university" aria-hidden="true"></i>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="task__icon--select col-xs-4">
+											<input type="radio" name="fa-icon" value="fa fa-pie-chart">
+											<i class="fa fa-pie-chart" aria-hidden="true"></i>
+										</div>
+
+										<div class="task__icon--select col-xs-4">
+											<input type="radio" name="fa-icon" value="fa fa-users">
+											<i class="fa fa-users" aria-hidden="true"></i>
+										</div>
+
+										<div class="task__icon--select col-xs-4">
+											<input type="radio" name="fa-icon" value="fa fa-video-camera">
+											<i class="fa fa-video-camera" aria-hidden="true"></i>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="task__icon--select col-xs-4">
+											<input type="radio" name="fa-icon" value="fa fa-github">
+											<i class="fa fa-github" aria-hidden="true"></i>
+										</div>
+
+										<div class="task__icon--select col-xs-4">
+											<input type="radio" name="fa-icon" value="fa fa-database">
+											<i class="fa fa-database" aria-hidden="true"></i>
+										</div>
+										<div class="task__icon--select col-xs-4">
+											<input type="radio" name="fa-icon" value="fa fa-book">
+											<i class="fa fa-book" aria-hidden="true"></i>
+										</div>
+									</div>
+									
+								</div>
+								<button class="task__button--save">Save</button>
+							</div>				 		
+						</div>
+				</div>	
+
+
 				<span class="task__day">today</span>
 				<div class="row">
 					<div class="col-sm-12 col-xs-12">
@@ -38,7 +105,7 @@
 
 						<div class="col-sm-9 col-xs-9">
 							<div class="task__item">
-								<span class="task__item--title" value="data-title">Design onboarding screen</span>
+								<span class="task__item--title">Design onboarding screen</span>
 								<span class="task__item--description">Discuss with the dev first</span>
 							</div>
 						</div>
@@ -108,7 +175,42 @@
 						
 					</div>
 					<div class="border"></div>
-				</div>				
+				</div>	
+
+				<!--template-->
+				<script id="task-template" type="text/x-handlebars-template">
+				{{#tasks}}
+				<div class="row">
+					<div class="col-sm-12 col-xs-12">
+						<div class="col-sm-1 col-xs-1 ">
+							<input id="box4" type="checkbox" name="task__checkbox">
+							<label for="box4" class="checkbox__mask"></label>
+						</div>
+
+						<div class="col-sm-1 col-xs-1 ">
+							<div class="task__icon">
+								<i class="{{icon}}" aria-hidden="true"></i>
+							</div>
+						</div>
+
+						<div class="col-sm-9 col-xs-9">
+							<div class="task__item">
+								<span class="task__item--title">{{title}}</span>
+								<span class="task__item--description">{{description}}</span>
+							</div>
+						</div>
+
+						<div class="col-sm-1 col-xs-1 ">
+							<div class="task__button">
+								<i class="fa fa-star" aria-hidden="true"></i>
+							</div>
+						</div>						
+					</div>
+					<div class="border"></div>
+				</div>
+				{{/tasks}}
+				</script>
+				<!-- end template -->			
 			</div>
 		</div>
 	</main>

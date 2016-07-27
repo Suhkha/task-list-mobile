@@ -40,10 +40,15 @@ input[type=checkbox]:checked + .checkbox__mask:before
 	content: '\f046'
 	font-family: FontAwesome
 	letter-spacing: 5px
-	
+.form-control
+	margin 0 0 30px 0
+	border-radius 0px	
 .task
 	background white
 	padding-bottom 20px
+	&__form
+		&--hidden
+			display none
 	&__day 
 		color $gray
 		text-transform uppercase
@@ -52,13 +57,16 @@ input[type=checkbox]:checked + .checkbox__mask:before
 		padding 15px 30px
 	&__icon
 		.fa
-		&--completed
 			color $purple
+		&--completed
+			color $gray !important
+		.fa
+		&--completed
 			font-size 25px
 			line-height 1
 			margin-left 5px
-		&--completed
-			color $gray !important
+		&--select
+			padding 0
 	&__header
 		background-image url('../images/header__task-list.jpg')
 		background-position center center
@@ -77,7 +85,7 @@ input[type=checkbox]:checked + .checkbox__mask:before
 			left 0
 		&--title 
 			color white
-			font-size 40px
+			font-size 30px
 			position absolute
 			bottom 30px
 			left 30px
@@ -102,8 +110,16 @@ input[type=checkbox]:checked + .checkbox__mask:before
 		&--favorite
 			color $yellow !important
 		.fa-trash-o
-			color $red !important			
+			color $red !important
+		&--save
+			color white
+			background $purple_dark
+			border none
+			padding 5px 30px
+			float right
+			margin-top 40px			
 	&__item
+	&__input
 		padding 0 0 0 5px
 		&--title
 		&--description

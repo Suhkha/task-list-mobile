@@ -32,9 +32,16 @@ input[type=checkbox]:checked + .checkbox__mask:before {
   font-family: FontAwesome;
   letter-spacing: 5px;
 }
+.form-control {
+  margin: 0 0 30px 0;
+  border-radius: 0px;
+}
 .task {
   background: #fff;
   padding-bottom: 20px;
+}
+.task__form--hidden {
+  display: none;
 }
 .task__day {
   color: #adb5c6;
@@ -43,15 +50,20 @@ input[type=checkbox]:checked + .checkbox__mask:before {
   display: block;
   padding: 15px 30px;
 }
+.task__icon .fa {
+  color: #5c4979;
+}
+.task__icon--completed {
+  color: #adb5c6 !important;
+}
 .task__icon .fa,
 .task__icon--completed {
-  color: #5c4979;
   font-size: 25px;
   line-height: 1;
   margin-left: 5px;
 }
-.task__icon--completed {
-  color: #adb5c6 !important;
+.task__icon--select {
+  padding: 0;
 }
 .task__header {
   background-image: url("../images/header__task-list.jpg");
@@ -76,7 +88,7 @@ input[type=checkbox]:checked + .checkbox__mask:before {
 }
 .task__header--title {
   color: #fff;
-  font-size: 40px;
+  font-size: 30px;
   position: absolute;
   bottom: 30px;
   left: 30px;
@@ -107,29 +119,48 @@ input[type=checkbox]:checked + .checkbox__mask:before {
 .task__button .fa-trash-o {
   color: #f9585f !important;
 }
-.task__item {
+.task__button--save {
+  color: #fff;
+  background: #46457d;
+  border: none;
+  padding: 5px 30px;
+  float: right;
+  margin-top: 40px;
+}
+.task__item,
+.task__input {
   padding: 0 0 0 5px;
 }
 .task__item--title,
+.task__input--title,
 .task__item--description,
-.task__item--completed {
+.task__input--description,
+.task__item--completed,
+.task__input--completed {
   display: block;
 }
 .task__item--title,
-.task__item--completed {
+.task__input--title,
+.task__item--completed,
+.task__input--completed {
   font-size: 18px;
 }
-.task__item--title {
+.task__item--title,
+.task__input--title {
   color: #46457d;
   font-weight: bold;
 }
-.task__item--description {
+.task__item--description,
+.task__input--description {
   font-size: 16px;
 }
 .task__item--description,
-.task__item--completed {
+.task__input--description,
+.task__item--completed,
+.task__input--completed {
   color: #adb5c6;
 }
-.task__item--completed {
+.task__item--completed,
+.task__input--completed {
   text-decoration: line-through;
 }

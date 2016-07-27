@@ -31,4 +31,32 @@ $(window).load(function(){
 		var itemToDelete = $(this).closest(".row");
 		itemToDelete.remove();		
 	});
+
+
+	//Show tasks
+	$(".task__button--add").on("click", function(){
+		$(this).parent().siblings(".task__list").find(".task__form").toggleClass('task__form--hidden');
+	});
+
+	//Add tasks
+	$(".task__button--save").on("click", function(){
+		var title 		= $("#title").val();
+		var description = $("#description").val();
+		var icon 		= $("input:checked").val();
+
+		var source = $("#task-template").html();
+		var template = Handlebars.compile(source);
+
+		var data = {
+			tasks: [{
+				title: title,
+				description: description,
+				icon: icon
+			}]
+		};
+
+		console.log(data);
+		$('.task__list').append(template(data));
+	});
+
 });

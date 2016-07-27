@@ -32,7 +32,8 @@ gulp.task('bootstrap', function(){
 gulp.task('js', function(){
 	gulp.src([
 		'bower_components/jquery/dist/jquery.js',
-		'bower_components/modernizr/modernizr.js'
+		'bower_components/modernizr/modernizr.js',
+		'bower_components/handlebars/handlebars.js'
 	])
 		.pipe(concat('vendor.min.js'))
 		.pipe(uglify())
