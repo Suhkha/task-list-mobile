@@ -1,27 +1,27 @@
 $(window).load(function(){
 
 	// Checking/Unchecking tasks
-	$("input[type=checkbox]").on("click", function(){
+	var checkbox = $("input[type=checkbox]");
+	checkbox.on("click", checkingTasks);
 
-		var currentCheck = $(this).parent().siblings();
+	function checkingTasks () {
+		 var currentCheck = $(this).parent().siblings();
 
-		if($(this).is(':checked')){
+		 if($(this).is(':checked')){
+		 	currentCheck.find('.task__item--title, .task__item--description').addClass('task__item--completed');
+		 	currentCheck.find('.task__icon > .fa').addClass('task__icon--completed');
+		 	currentCheck.find('.fa-star').attr('class', 'fa fa-trash-o');
 
-			currentCheck.find('.task__item--title, .task__item--description').addClass('task__item--completed');
-			currentCheck.find('.task__icon > .fa').addClass('task__icon--completed');
-			currentCheck.find('.fa-star').attr('class', 'fa fa-trash-o');
+		 }else{
 
-		}else{
+		 	currentCheck.find('.task__item--title, .task__item--description').removeClass('task__item--completed');
+		 	currentCheck.find('.task__icon > .fa').removeClass('task__icon--completed');
+		 	currentCheck.find('.fa-trash-o').attr('class', 'fa fa-star');
 
-			currentCheck.find('.task__item--title, .task__item--description').removeClass('task__item--completed');
-			currentCheck.find('.task__icon > .fa').removeClass('task__icon--completed');
-			currentCheck.find('.fa-trash-o').attr('class', 'fa fa-star');
-
-		}
-	});
+		 } 
+	}
 
 	// Favorites
-	// it works!
 	$(".task__button").on("click",".fa-star",function(){
 		$(this).toggleClass('task__button--favorite');
 	});
@@ -43,6 +43,7 @@ $(window).load(function(){
 		var title 		= $("#title").val();
 		var description = $("#description").val();
 		var icon 		= $("input:checked").val();
+		var countCheck  = Math.floor((Math.random() * 100) + 1);
 
 		var source = $("#task-template").html();
 		var template = Handlebars.compile(source);
@@ -51,12 +52,16 @@ $(window).load(function(){
 			tasks: [{
 				title: title,
 				description: description,
-				icon: icon
+				icon: icon,
+				countCheck: countCheck
 			}]
 		};
 
-		console.log(data);
+		
 		$('.task__list').append(template(data));
+
+		checkbox = $("input[type=checkbox]");
+		checkbox.on("click", checkingTasks);
 	});
 
 });

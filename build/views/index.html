@@ -92,8 +92,8 @@
 				<span class="task__day">today</span>
 				<div class="row">
 					<div class="col-sm-12 col-xs-12">
-						<div class="col-sm-1 col-xs-1 ">
-							<input id="box1" type="checkbox" name="task__checkbox">
+						<div class="col-sm-1 col-xs-1 task__checkbox">
+							<input id="box1" type="checkbox">
 							<label for="box1" class="checkbox__mask"></label>
 						</div>
 
@@ -122,8 +122,8 @@
 
 				<div class="row">
 					<div class="col-sm-12 col-xs-12">
-						<div class="col-sm-1 col-xs-1 ">
-							<input id="box2" type="checkbox" name="task__checkbox">
+						<div class="col-sm-1 col-xs-1 task__checkbox">
+							<input id="box2" type="checkbox">
 							<label for="box2" class="checkbox__mask"></label>
 						</div>
 						<div class="col-sm-1 col-xs-1 ">
@@ -151,8 +151,8 @@
 				<span class="task__day">tomorrow</span>
 				<div class="row">
 					<div class="col-sm-12 col-xs-12">
-						<div class="col-sm-1 col-xs-1 ">
-							<input id="box3" type="checkbox" name="task__checkbox">
+						<div class="col-sm-1 col-xs-1 task__checkbox">
+							<input id="box3" type="checkbox">
 							<label for="box3" class="checkbox__mask"></label>
 						</div>
 						<div class="col-sm-1 col-xs-1 ">
@@ -180,11 +180,12 @@
 				<!--template-->
 				<script id="task-template" type="text/x-handlebars-template">
 				{{#tasks}}
+				<span class="task__day">tomorrow</span>
 				<div class="row">
 					<div class="col-sm-12 col-xs-12">
-						<div class="col-sm-1 col-xs-1 ">
-							<input id="box4" type="checkbox" name="task__checkbox">
-							<label for="box4" class="checkbox__mask"></label>
+						<div class="col-sm-1 col-xs-1 task__checkbox">
+							<input id="box{{countCheck}}" type="checkbox">
+							<label for="box{{countCheck}}" class="checkbox__mask"></label>
 						</div>
 
 						<div class="col-sm-1 col-xs-1 ">
