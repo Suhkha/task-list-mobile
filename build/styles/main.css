@@ -93,7 +93,7 @@ input[type=checkbox]:checked + .checkbox__mask:before {
   bottom: 30px;
   left: 30px;
 }
-.task__button--add .fa-plus {
+.task__button--add .fa {
   background: #f9585f;
   color: #fff;
   font-size: 50px;
