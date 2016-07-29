@@ -36,7 +36,7 @@ $(window).load(function(){
 	//Show tasks
 	$(".task__button--add").on("click", function(){
 		var task__form = $(this).parent().siblings(".task__list").find(".task__form").toggleClass('task__form--hidden');
-		$(".fa").toggleClass('fa-minus-square-o');
+		$(".fa").toggleClass('fa-minus');
 		//$(this).is(":visible") ? $(this).find(".fa-plus").attr('class', 'fa fa-minus-square-o') : $(this).find(".fa-minus-square-o").attr('class', 'fa fa-plus');
 	});
 
