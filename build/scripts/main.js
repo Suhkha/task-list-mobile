@@ -1,5 +1,5 @@
-$(window).load(function(){
-
+$(function(){
+	console.log( "ready!" );
 	// Checking/Unchecking tasks
 	var checkbox = $("input[type=checkbox]");
 	checkbox.on("click", checkingTasks);
@@ -22,13 +22,12 @@ $(window).load(function(){
 	}
 
 	// Favorites
-	$(".task__button").on("click",".fa-star",function(){
+	$(document).on("click",".fa-star",function(){
 		$(this).toggleClass('task__button--favorite');
-		console.log($(this));	
 	});
 
 	//Delete task
-	$(".task__button").on("click",".fa-trash-o",function(){
+	$(document).on("click",".fa-trash-o",function(){
 		var itemToDelete = $(this).closest(".row");
 		itemToDelete.remove();	
 	});
@@ -66,8 +65,6 @@ $(window).load(function(){
 		checkbox.on("click", checkingTasks);
 		$("#title").val("");
 		$("#description").val("");
-		$("input:checked").val("");
-
 
 		var close__form = $(this).parent().parent().parent().toggleClass('task__form--hidden');
 		var change_icon  = $(".task__button--add").find(".fa-minus").removeClass('fa-minus');
