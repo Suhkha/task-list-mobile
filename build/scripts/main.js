@@ -24,20 +24,20 @@ $(window).load(function(){
 	// Favorites
 	$(".task__button").on("click",".fa-star",function(){
 		$(this).toggleClass('task__button--favorite');
+		console.log($(this));	
 	});
 
 	//Delete task
 	$(".task__button").on("click",".fa-trash-o",function(){
 		var itemToDelete = $(this).closest(".row");
-		itemToDelete.remove();		
+		itemToDelete.remove();	
 	});
 
 
 	//Show tasks
 	$(".task__button--add").on("click", function(){
-		var task__form = $(this).parent().siblings(".task__list").find(".task__form").toggleClass('task__form--hidden');
-		$(".fa").toggleClass('fa-minus');
-		//$(this).is(":visible") ? $(this).find(".fa-plus").attr('class', 'fa fa-minus-square-o') : $(this).find(".fa-minus-square-o").attr('class', 'fa fa-plus');
+		var task__form = $(".task__form").toggleClass('task__form--hidden');
+		$(this).find(".fa-plus").toggleClass('fa-minus');
 	});
 
 	//Add tasks
@@ -64,6 +64,14 @@ $(window).load(function(){
 
 		checkbox = $("input[type=checkbox]");
 		checkbox.on("click", checkingTasks);
+		$("#title").val("");
+		$("#description").val("");
+		$("input:checked").val("");
+
+
+		var close__form = $(this).parent().parent().parent().toggleClass('task__form--hidden');
+		var change_icon  = $(".task__button--add").find(".fa-minus").removeClass('fa-minus');
+
 	});
 
 });
